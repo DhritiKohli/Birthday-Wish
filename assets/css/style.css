@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap");
+
 html, body {
     /* 1. Force the page to take up 100% of the screen height */
     height: 100%;
@@ -5,7 +7,7 @@ html, body {
     padding: 0;
 }
 body { 
-    font-family: cursive; 
+    font-family: "Fredoka", sans-serif; 
     background-image: url("../img/birthdayBg.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -20,18 +22,32 @@ body {
     margin-top: 5%;
 }
 p {
-font-family:fantasy;
+font-family: inherit;
 font-size: 20px; 
+color: #b1a2e6;
+margin-left: 8%;
+}
+h1 {
+    font-size: 50px;
+    color: #b1a2e6;
+    margin-left: 8%;
+}
+#blowCandleBtn,
+#letterExit,
+h1 {
+    font-family: "Fredoka", sans-serif;
 }
 #letterButton
 {
     margin-left: 8%;
     border: transparent;
+    margin-left: 15%;
 }
 #letterButton img
 {
-    width: 14em;
-    height: 18em;
+    width: 18em;
+    height: 24em;
+    
     
 }
 #letterExit
@@ -39,4 +55,34 @@ font-size: 20px;
     background: transparent;
     border: transparent;
     font-size:16px;
+}
+#blowCandleBtn
+{
+    background: transparent;
+    border: 2px solid;
+    font-size:40px;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    border-radius: 25px;
+    background-color: #b1a2e6;
+    color: lightyellow;
+}
+
+.animated-object-container {
+    pointer-events: none;
+}
+
+.animated-object {
+    display: block;
+    width: min(350px, 390px);
+    height: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+    position: absolute;
+    bottom: 5%;
+    right: 13%;
+}
+#candleLightVideo{
+    border: transparent;
 }

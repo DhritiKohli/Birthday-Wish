@@ -14,7 +14,25 @@
         <button type="button" id="letterButton" class="letter-btn">
     <img src="../assets/img/letter.png" alt="Clickable Letter Graphic">
 </button>
-        
+
+    <div class="animated-object-container">
+        <video
+            id="candleLightVideo"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="animated-object"
+            tabindex="-1"
+            disablepictureinpicture
+            controlslist="nodownload noplaybackrate noremoteplayback"
+        >
+            <source src="../assets/img/CandleLight.m4v" type="video/mp4">
+            <source src="../assets/img/CandleLight.mov" type="video/quicktime">
+        </video>
+    </div>
+    <button id="blowCandleBtn">Blow Candles!</button>
         <div id="letterContent" style="display: none;">
             <button id="letterExit">X</button>
             <p>
