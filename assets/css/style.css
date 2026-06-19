@@ -125,10 +125,11 @@ h1 {
     right: 13%;
 }
 
-/* Consolidated video focus/outline overrides */
+
 #candleLightVideo, 
 .animated-object,
 .animated-object-container {
+    border-radius: 120px;
     border: none !important;
     outline: none !important;
     outline-style: none !important;
@@ -146,6 +147,11 @@ h1 {
     outline: none !important;
     outline-style: none !important;
     box-shadow: none !important;
+}
+
+#candleLightVideo, 
+.animated-object {
+    clip-path: inset(5px 5px); 
 }
 
 @keyframes breathe {
