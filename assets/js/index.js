@@ -41,7 +41,7 @@ blowCandleBtn.addEventListener("click",()=>
 {
     if (candleLightVideo) {
         const blowedCake = document.createElement("img");
-        blowedCake.src="../assets/img/CakeBlown.png";
+        blowedCake.src="assets/img/CakeBlown.png";
         blowedCake.id = "candleLightVideo";
         blowedCake.classList.add("animated-object");
         
