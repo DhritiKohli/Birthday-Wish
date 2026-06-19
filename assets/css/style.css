@@ -55,6 +55,51 @@ h1 {
     background: transparent;
     border: transparent;
     font-size:16px;
+    
+}
+
+#letterContent {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(20, 15, 35, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.letter-card {
+    position: relative;
+    width: min(92vw, 760px);
+    max-height: 80vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 56px 32px 32px;
+    border-radius: 28px;
+    background: rgba(255, 248, 235, 0.98);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    color: #7b5ea7;
+    line-height: 1.6;
+}
+
+.letter-card p {
+    margin: 0;
+    color: inherit;
+}
+
+.letter-card #letterExit {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    margin-bottom: 10px;
+    z-index: 1;
+    font-size: 25px;
+    color: #7b5ea7;
+    cursor: pointer;
 }
 #blowCandleBtn
 {

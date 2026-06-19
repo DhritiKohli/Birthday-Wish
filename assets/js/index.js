@@ -6,11 +6,13 @@ const blowCandleBtn = document.getElementById("blowCandleBtn");
 // Letter Functionality
 
 viewLetterBtn.addEventListener("click", () => {
-    letter.style.display = 'block';
+    letter.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
 } );
 
 exitLetter.addEventListener("click", ()=>{
     letter.style.display= 'none';
+    document.body.style.overflow = '';
 })
 
 if (candleLightVideo) {
