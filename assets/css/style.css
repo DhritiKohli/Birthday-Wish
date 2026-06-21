@@ -12,22 +12,29 @@ body {
     background-position: center;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: flex-start;
+    justify-content: center;
     text-align: left;
-    margin-top: 5%;
+    padding: clamp(16px, 4vw, 48px);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+main {
+    position: relative;
+    width: min(100%, 1400px);
+    min-height: calc(100vh - clamp(32px, 8vw, 96px));
 }
 p {
     font-family: inherit;
-    font-size: 20px; 
+    font-size: clamp(1rem, 1.8vw, 1.25rem); 
     color: #b1a2e6;
-    margin-left: 8%;
+    margin: 0 0 0 8%;
+    max-width: 42rem;
 }
 h1 {
-    font-size: 50px;
+    font-size: clamp(2rem, 5vw, 3.125rem);
     color: #b1a2e6;
-    margin-left: 8%;
+    margin: 8% 0 0 8%;
 }
 #blowCandleBtn,
 #letterExit,
@@ -42,14 +49,16 @@ h1 {
     background: transparent; /* Ensures no default button background behind image */
 }
 #letterButton img {
-    width: 18em;
-    height: 24em;
+    width: clamp(10rem, 24vw, 18rem);
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
     animation: breathe 2s infinite ease-in-out;
 }
 #letterExit {
     background: transparent;
     border: transparent;
-    font-size:16px;
+    font-size: 16px;
 }
 #letterContent {
     display: none;
@@ -93,15 +102,15 @@ h1 {
     cursor: pointer;
 }
 #blowCandleBtn {
-    font-size: 40px;              
+    font-size: clamp(1rem, 2.8vw, 2.5rem);              
     font-weight: 600;
     position: absolute;
-    top: 15%;
-    right: 13%;
+    top: clamp(5rem, 14vh, 15%);
+    right: clamp(1rem, 8vw, 13%);
     background-color: #ae9bf3;   
     color: #fffff0;               
     border: 2px solid #ffffff;    
-    padding: 10px 28px;           
+    padding: clamp(0.5rem, 1.2vw, 0.75rem) clamp(1rem, 2.5vw, 1.75rem);           
     border-radius: 50px;          
     cursor: pointer;              
     box-shadow: 0 8px 24px rgba(174, 155, 243, 0.4); 
@@ -117,13 +126,13 @@ h1 {
 }
 .animated-object {
     display: block;
-    width: min(350px, 390px);
+    width: clamp(10rem, 24vw, 21.875rem);
     height: auto;
     user-select: none;
     -webkit-user-drag: none;
     position: absolute;
-    bottom: 5%;
-    right: 13%;
+    bottom: clamp(1rem, 4vh, 5%);
+    right: clamp(1rem, 8vw, 13%);
 }
 
 
@@ -161,5 +170,64 @@ h1 {
     }
     50% {
         transform: scale(1.05);
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    h1,
+    p {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    #letterButton {
+        margin-left: 4%;
+    }
+
+    #blowCandleBtn {
+        top: 9rem;
+        right: 4%;
+    }
+
+    .animated-object {
+        right: 4%;
+        bottom: 4%;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 12px;
+    }
+
+    #letterButton img {
+        width: min(68vw, 14rem);
+    }
+
+    #blowCandleBtn {
+        top: auto;
+        bottom: 38%;
+        left: 4%;
+        right: auto;
+    }
+
+    .animated-object {
+        width: min(56vw, 14rem);
+        right: 4%;
+        bottom: 2%;
+    }
+
+    .letter-card {
+        width: min(94vw, 760px);
+        padding: 48px 20px 24px;
     }
 }
