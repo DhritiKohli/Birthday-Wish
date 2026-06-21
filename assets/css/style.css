@@ -34,7 +34,7 @@ p {
 h1 {
     font-size: clamp(2rem, 5vw, 3.125rem);
     color: #b1a2e6;
-    margin: 8% 0 0 8%;
+    margin: 2% 0 0 8%;
 }
 #blowCandleBtn,
 #letterExit,
